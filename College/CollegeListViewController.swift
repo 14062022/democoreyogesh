@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollegeList: UIViewController
+class CollegeListViewController: UIViewController
 {
     var arrCollege = [College]()
 
@@ -26,7 +26,7 @@ class CollegeList: UIViewController
         self.navigationController?.pushViewController(collegeForm, animated: true)
     }
 }
-extension CollegeList : UITableViewDelegate, UITableViewDataSource
+extension CollegeListViewController : UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrCollege.count
@@ -41,8 +41,8 @@ extension CollegeList : UITableViewDelegate, UITableViewDataSource
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let collegeDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CollegeDetailVC") as! CollegeDetailVC
-        collegeDetailVC.collageDetail = arrCollege[indexPath.row]
+        let collegeDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CollegeDetailVC") as! CollegeDetailViewController
+        collegeDetailVC.collegeDetail = arrCollege[indexPath.row]
         collegeDetailVC.indexRow = indexPath.row
         self.navigationController?.pushViewController(collegeDetailVC, animated: true)
         

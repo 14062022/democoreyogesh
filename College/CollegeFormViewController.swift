@@ -22,14 +22,14 @@ class CollegeFormViewController: UIViewController {
     
     var isUpdate = false
     var indexRow = Int()
-    var collageDetails: College?
+    var collegeDetail: College?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.txtName.text = collageDetails?.name
-        self.txtCity.text = collageDetails?.city
-        self.txtAddress.text = collageDetails?.address
-        self.txtUniversity.text = collageDetails?.university
+        self.txtName.text = collegeDetail?.name
+        self.txtCity.text = collegeDetail?.city
+        self.txtAddress.text = collegeDetail?.address
+        self.txtUniversity.text = collegeDetail?.university
     }
     
     override func viewWillAppear(_ animated: Bool) {

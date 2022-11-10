@@ -15,20 +15,20 @@ class databaseHelper : NSObject
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     func saveCollegeData(collegeDict: [String:String])
-    {
-        let college = NSEntityDescription.insertNewObject(forEntityName: "College", into: context!) as! College
-        college.name = collegeDict["collegeName"]
-        college.address = collegeDict["collegeAddress"]
-        college.city = collegeDict["collegeCity"]
-        college.university = collegeDict["collegeUniversity"]
-        
-        do {
-            try context?.save()
+        {
+            let college = NSEntityDescription.insertNewObject(forEntityName: "College", into: context!) as! College
+            college.name = collegeDict["collegeName"]
+            college.address = collegeDict["collegeAddress"]
+            college.city = collegeDict["collegeCity"]
+            college.university = collegeDict["collegeUniversity"]
+            
+            do {
+                try context?.save()
+            }
+            catch let err {
+                print("data not saved..\(err.localizedDescription)")
+            }
         }
-        catch let err {
-            print("data not saved..\(err.localizedDescription)")
-        }
-    }
     
     func getAllCollegeData() -> [College]
     {
@@ -42,6 +42,7 @@ class databaseHelper : NSObject
         }
         return arrCollege
     }
+    
     func deleteCollegeData(index:Int) ->[College]
     {
         var collegeData = self.getAllCollegeData()
@@ -69,5 +70,32 @@ class databaseHelper : NSObject
         catch let err {
             print("data not saved..\(err.localizedDescription)")
         }
+    }
+    func saveStudentData(studentDict:[String:String], college:College)
+        {
+            let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context!) as! Student
+            student.name = studentDict["Sname"]
+            student.email = studentDict["Semail"]
+            student.phone = studentDict["Sphone"]
+            student.universities = college
+            
+            do {
+                try context?.save()
+            }
+            catch let err {
+                print("data not saved..\(err.localizedDescription)")
+            }
+        }
+    func getAllStudentData() -> [Student]
+    {
+        var arrStudent = [Student]()
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+        do{
+            arrStudent = try context?.fetch(fetchRequest) as! [Student]
+        }
+        catch let err{
+            print("error in fetching..\(err.localizedDescription)")
+        }
+        return arrStudent
     }
 }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--College List-->
+        <!--College List View Controller-->
         <scene sceneID="eoF-D2-Kku">
             <objects>
-                <viewController id="ua2-QN-sU8" customClass="CollegeList" customModule="democore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollegeListViewController" id="ua2-QN-sU8" customClass="CollegeListViewController" customModule="democore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fSZ-hb-etU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="97.767857142857139"/>
         </scene>
-        <!--College DetailVC-->
+        <!--College Detail View Controller-->
         <scene sceneID="UHo-pN-Q6h">
             <objects>
-                <tableViewController storyboardIdentifier="CollegeDetailVC" id="TW9-uw-3LI" customClass="CollegeDetailVC" customModule="democore" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CollegeDetailVC" id="TW9-uw-3LI" customClass="CollegeDetailViewController" customModule="democore" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bn7-90-9Kz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,20 +269,20 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="erA-lH-bDY">
-                                        <rect key="frame" x="0.0" y="183" width="414" height="41"/>
+                                        <rect key="frame" x="0.0" y="183" width="414" height="41.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="erA-lH-bDY" id="yq3-ZE-ktp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj1-Re-ule">
-                                                    <rect key="frame" x="10" y="10" width="302" height="21"/>
+                                                    <rect key="frame" x="10" y="10" width="302" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ub-0r-35R">
-                                                    <rect key="frame" x="362" y="10" width="42" height="21"/>
+                                                    <rect key="frame" x="362" y="10" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -296,6 +296,37 @@
                                                 <constraint firstItem="2ub-0r-35R" firstAttribute="top" secondItem="yq3-ZE-ktp" secondAttribute="top" constant="10" id="O0c-rw-Q3H"/>
                                                 <constraint firstAttribute="bottom" secondItem="Tj1-Re-ule" secondAttribute="bottom" constant="10" id="Qmx-K7-zea"/>
                                                 <constraint firstItem="Tj1-Re-ule" firstAttribute="top" secondItem="yq3-ZE-ktp" secondAttribute="top" constant="10" id="asB-QM-Env"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4s7-6S-TyN">
+                                        <rect key="frame" x="0.0" y="224.5" width="414" height="41.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4s7-6S-TyN" id="TQf-yW-fP0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Students" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-h6-laK">
+                                                    <rect key="frame" x="10" y="10" width="302" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNb-p3-5rI">
+                                                    <rect key="frame" x="362" y="10" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="QNb-p3-5rI" secondAttribute="bottom" constant="10" id="1Md-zo-ftG"/>
+                                                <constraint firstItem="hNK-h6-laK" firstAttribute="leading" secondItem="TQf-yW-fP0" secondAttribute="leading" constant="10" id="7AD-VF-DNo"/>
+                                                <constraint firstAttribute="trailing" secondItem="QNb-p3-5rI" secondAttribute="trailing" constant="10" id="D3p-fC-fFP"/>
+                                                <constraint firstItem="QNb-p3-5rI" firstAttribute="top" secondItem="TQf-yW-fP0" secondAttribute="top" constant="10" id="FjB-fi-KLR"/>
+                                                <constraint firstAttribute="bottom" secondItem="hNK-h6-laK" secondAttribute="bottom" constant="10" id="FnO-vd-O0X"/>
+                                                <constraint firstItem="QNb-p3-5rI" firstAttribute="leading" secondItem="hNK-h6-laK" secondAttribute="trailing" constant="50" id="LZs-Qc-CIj"/>
+                                                <constraint firstItem="hNK-h6-laK" firstAttribute="top" secondItem="TQf-yW-fP0" secondAttribute="top" constant="10" id="Rfn-PO-1q5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -315,6 +346,7 @@
                         <outlet property="lblCollageCity" destination="7lp-W2-NyZ" id="yhT-W8-dll"/>
                         <outlet property="lblCollageName" destination="HdC-wP-jg9" id="dSb-ue-HVa"/>
                         <outlet property="lblCollageUniversity" destination="2ub-0r-35R" id="ygA-Gg-74L"/>
+                        <outlet property="lblStudent" destination="QNb-p3-5rI" id="DhZ-rX-2u5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZZ-HW-uKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
